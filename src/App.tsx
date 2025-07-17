@@ -6,6 +6,8 @@ import About from "./Pages/About"
 import Backend from "./Pages/Backend"
 import FullStack from "./Pages/FullStack"
 import RoadMap from "./Pages/RoadMap"
+import MyNotes from "./Pages/MyNotes"
+import ErrorPage from "./Pages/ErrorPage"
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
           
              <Routes>
                       <Route path="/" element={<Home/>}/>
+                      <Route path="*" element={<ErrorPage/>}/>
                       
                       {/* applayout */}
                       <Route element={<AppLayout/>}>
@@ -25,6 +28,7 @@ function App() {
                             <Route path="/about" element={<About/>}/>
                             <Route path="/backend" element={<Backend/>}/>
                             <Route path="/fullstack" element={<FullStack/>}/>
+                            <Route path="/mynotes" element={<MyNotes/>}/>
                             
                       </Route>
              </Routes>

@@ -18,7 +18,8 @@ const Navbar:React.FC = () => {
   const navlinks =[
     {label:"Home",path:"/"},
     {label:"RoadMap",path:"/roadmap"},
-    {label:"About",path:"/about"},
+    {label:"MyNotes",path:"/mynotes"},
+     {label:"About",path:"/about"},
   ];
 
   return (
