@@ -13,13 +13,18 @@ const FEFlowchart:React.FC<FlowProps> = ({nodes,edges,height="600px",width="100%
 
 
   return (
-    <div className='md:pt-15'
-     style={{width,height}}>
+    <div className='md:pt-15 sm:pt-10 w-full '
+     style={{width,height:"50vh" ,maxHeight:"600px"}}>
  
         <ReactFlow 
            nodes={nodes}
            edges={edges}
            fitView
+           panOnDrag={false}
+           nodesDraggable={false}
+           zoomOnDoubleClick={false}
+           zoomOnPinch={true}
+           zoomOnScroll={false}
         >
          <Background
          color="#ccc"

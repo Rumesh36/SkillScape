@@ -1,5 +1,7 @@
+import FaqCard from "../Components/FaqCard";
 import FEFlowchart from "../utilities/FEFlowchart"
 import {type Node,type Edge } from 'reactflow';
+
 
  const initialNodes:Node[] =[
     {
@@ -139,17 +141,50 @@ import {type Node,type Edge } from 'reactflow';
   ]
 
 const Frontend = () => {
+
+  
  
   return (
     <>
-    
+      
+      
     <FEFlowchart 
         
         nodes={initialNodes}
         edges={initialEdges}
 
     />
+    {/* faqs */}
     
+    <div className="pb-10">
+  
+      <FaqCard   
+        question="What is Frontend Development?"
+        answer="Frontend development is the process of building the visual and 
+        interactive parts of a website or web application that users see in their browser. It includes creating layouts to arrange content, buttons for user actions, and navigation menus to move between pages. Developers also add animations for smooth interactions and build forms for user input like login or sign-up. A key part of frontend is making the design responsive, so the website looks and works well on mobile, tablet, and desktop devices. In short, 
+        frontend brings the user interface to life and makes the web usable."
+      />
+
+      <FaqCard
+         question="What Do You Need to Learn for Frontend?"
+         answer="tart with HTML, where you learn basic tags, forms, 
+         tables, and semantic elements. Then move to CSS to understand selectors, 
+         the box model, Flexbox, Grid, media queries, and simple animations. Learn JavaScript for logic and interactivity, including variables, functions, loops, DOM manipulation, events, and modern ES6+ features like arrow functions and async/await. Focus on responsive design using a mobile-first approach, Flexbox, Grid, and media queries. Learn Git and GitHub for version control and collaboration. Then explore React.js, where you’ll work with JSX, components, props, state, hooks, and routing. For faster styling, use Tailwind CSS or Bootstrap. Learn tools like npm, Vite, Prettier, and ESLint to manage and format your projects.
+          Finally, deploy your site using Netlify, Vercel, or GitHub Pages."
+      />
+
+<FaqCard
+  question="Here are some Free Resources that might help you out!"
+  answer={
+    <p>
+      🌐 <a href="https://www.freecodecamp.org/" target="_blank" className="text-blue-600 underline">freeCodeCamp</a><br />
+      📘 <a href="https://developer.mozilla.org/" target="_blank" className="text-blue-600 underline">MDN Web Docs</a><br />
+      📗 <a href="https://www.w3schools.com/" target="_blank" className="text-blue-600 underline">W3Schools</a><br />
+      💬 <a href="https://stackoverflow.com/questions/tagged/frontend" target="_blank" className="text-blue-600 underline">Stack Overflow (Frontend)</a>
+    </p>
+  }
+/>
+    </div>
     
     </>
   )
