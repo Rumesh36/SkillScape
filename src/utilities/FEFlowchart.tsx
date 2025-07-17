@@ -9,7 +9,7 @@ interface FlowProps{
   width?:string;
 }
 
-const FEFlowchart:React.FC<FlowProps> = ({nodes,edges,height="600px",width="100%"}) => {
+const FEFlowchart:React.FC<FlowProps> = ({nodes,edges,width="100%"}) => {
 
 
   return (
