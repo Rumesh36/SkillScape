@@ -176,12 +176,12 @@ const Frontend = () => {
 <FaqCard
   question="Here are some Free Resources that might help you out!"
   answer={
-    <p>
-      🌐 <a href="https://www.freecodecamp.org/" target="_blank" className="text-blue-600 underline">freeCodeCamp</a><br />
-      📘 <a href="https://developer.mozilla.org/" target="_blank" className="text-blue-600 underline">MDN Web Docs</a><br />
-      📗 <a href="https://www.w3schools.com/" target="_blank" className="text-blue-600 underline">W3Schools</a><br />
-      💬 <a href="https://stackoverflow.com/questions/tagged/frontend" target="_blank" className="text-blue-600 underline">Stack Overflow (Frontend)</a>
-    </p>
+    <ul className="list-none  space-y-2">
+      <li>🌐 <a href="https://www.freecodecamp.org/" target="_blank" className="hover:text-blue-600 underline">freeCodeCamp</a></li>
+      <li>📘 <a href="https://developer.mozilla.org/" target="_blank" className="hover:text-blue-600 underline">MDN Web Docs</a></li>
+      <li>📗 <a href="https://www.w3schools.com/" target="_blank" className="hover:text-blue-600 underline">W3Schools</a></li>
+      <li>💬 <a href="https://stackoverflow.com/questions/tagged/frontend" target="_blank" className="hover:text-blue-600 underline">Stack Overflow (Frontend)</a></li>
+    </ul>
   }
 />
     </div>
