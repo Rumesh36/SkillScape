@@ -27,7 +27,7 @@ const FEFlowchart:React.FC<FlowProps> = ({nodes,edges,width="100%"}) => {
            zoomOnScroll={false}
         >
          <Background
-         color="#ccc"
+         color="#b3e4e8"
           gap={16} 
            />
         <Controls
