@@ -23,10 +23,14 @@ const MyNotes = () => {
 
   }
 // deleting notessss
-   
+const deleteNotes =(index:number)=>{
+  const upadtedNotes = noteList.filter((__,i)=>i!==index);
+  setNoteList(upadtedNotes);
+  localStorage.setItem(Storagekey,JSON.stringify(upadtedNotes))
+}
 
   return (
-    <div className="pt-20 px-4 min-h-screen bg-blue-50">
+    <div className="pt-20 px-4 min-h-screen bg-blue-50 overflow-x-auto">
 
       <h1 className="text-center mb-5 text-3xl font-bold  text-gray-600">My Notes Page</h1>
 
@@ -44,20 +48,33 @@ const MyNotes = () => {
      ):
       
     (
-       <div className="flex flex-col items-center gap-4 px-4 max-h-[60vh] overflow-y-auto">        
+       <div className="flex flex-col items-center gap-4 px-4 max-h-[60vh] overflow-y-auto overflow-hidden">        
         {noteList.map((note,index)=>(
         <div key={index}
-        className="bg-white w-full max-w-lg lg:max-w-xl shadow-md rounded-lg p-4 break-words border border-gray-200 hover:shadow-lg transition duration-200"
+        className="bg-white w-full flex flex-col justify-between max-w-lg lg:max-w-xl shadow-md rounded-lg p-4 break-words border border-gray-200 hover:shadow-lg transition duration-200"
               >
-          {note}
+          <h1>{note}</h1>
+          
+          {/* buttons */}
+        <div className="mr-3">
+          {/* edit btn */}
+           <button
+           
+           className="bg-green-600 px-3 py-1 rounded-md font-bold text-white">Edit</button>
+        
+         {/* delete button */}
+        <button
+         onClick={()=>deleteNotes(index)}
+         className="bg-red-500 px-2 py-1 rounded-md font-bold text-white hover:bg-red-600">Delete</button>
+
+      </div>
         </div>
       ))}
-      </div>
+    
+    </div>
 
-      )}
-      </div>
-
-      
+    )}
+    </div>
      </div>
   )
 }
